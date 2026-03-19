@@ -36,6 +36,7 @@ const { useSyncExternalStore } = require("react");
 //el programa no debe romperse ante entradas invalidas,
 //sino que debe informar al usuario de manera clara y amigable sobre el error y cómo corregirlo.
 
+//VALIDA EL VALOR
 function validarvalor(valor) {
   const n = Number(valor);
   if (!Number.isFinite(n)) {
@@ -83,7 +84,7 @@ if (unidadOrigen === "C" && unidadDestino === "F") {
   return ((valor - 273.15) * 9) / 5 + 32;
 }
 
-//Longitud y peso
+//Longitud 
 else if (unidadOrigen === "m" && unidadDestino === "cm") {
   return valor * 100;
 } else if (unidadOrigen === "m" && unidadDestino === "km") {
